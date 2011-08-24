@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var confy = require('../lib/confy');
+var argv = process.argv;
+
+switch (argv[2]) {
+  case 'get':
+    var res = confy.get(argv[3]);
+    console.log( JSON.stringify(res, null, '  ') );
+    break;
+  case 'set':
+    confy.set(argv[3]);
+    break;
+  case 'use':
+    confy.use(argv[3]);
+    console.log('use profile:', argv[3]);
+    break;
+}
