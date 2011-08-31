@@ -4,6 +4,7 @@ var confy = require('../lib/confy');
 var argv = process.argv;
 var cmd = argv[2];
 var name = argv[3];
+var usage = require('data-section').getSync('usage');
 
 switch (cmd) {
   case 'get':
@@ -19,4 +20,24 @@ switch (cmd) {
     confy.use(name);
     console.log('use profile:', name);
     break;
+  case '-v':
+    console.log('confy version', confy.version);
+    break;
+  case '-h':
+  default:
+    console.log(usage);
 }
+
+/* __DATA__
+@@ usage
+Usage: confy [-vh] <command> <args>
+
+commands:
+   get   get _name_ setting to current profile
+   set   set _name_ setting to current profile
+   use   use the _name_ profile
+
+options:
+   -h    show this help
+   -v    show version
+__DATA__ */
