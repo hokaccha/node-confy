@@ -2,17 +2,21 @@
 
 var confy = require('../lib/confy');
 var argv = process.argv;
+var cmd = argv[2];
+var name = argv[3];
 
-switch (argv[2]) {
+switch (cmd) {
   case 'get':
-    var res = confy.get(argv[3]);
-    console.log( JSON.stringify(res, null, '  ') );
+    var res = confy.get(name);
+    if (res) {
+      console.log(JSON.stringify(res, null, '  '));
+    }
     break;
   case 'set':
-    confy.set(argv[3]);
+    confy.set(name);
     break;
   case 'use':
-    confy.use(argv[3]);
-    console.log('use profile:', argv[3]);
+    confy.use(name);
+    console.log('use profile:', name);
     break;
 }
