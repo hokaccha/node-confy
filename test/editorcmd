@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var filename = process.argv[2];
+fs.writeFileSync(filename, JSON.stringify({ foo: 'bar' }));
