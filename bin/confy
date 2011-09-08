@@ -9,10 +9,11 @@ var name = argv[3];
 
 switch (cmd) {
   case 'get':
-    var res = confy.get(name);
-    if (res) {
-      console.log(JSON.stringify(res, null, '  '));
-    }
+    confy.get(name, function(err, res) {
+      if (res) {
+        console.log(JSON.stringify(res, null, '  '));
+      }
+    });
     break;
   case 'set':
     confy.set(name, function(err, res) {
