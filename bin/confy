@@ -15,7 +15,14 @@ switch (cmd) {
     }
     break;
   case 'set':
-    confy.set(name);
+    confy.set(name, function(err, res) {
+      if (err) {
+        console.log(err.toString());
+      }
+      else {
+        console.log('set data');
+      }
+    });
     break;
   case 'use':
     confy.use(name);
