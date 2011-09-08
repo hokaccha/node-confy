@@ -54,9 +54,10 @@ switch (cmd) {
 Usage: confy [-vh] <command> <args>
 
 commands:
-   get   get _name_ setting to current profile
-   set   set _name_ setting to current profile
-   use   use the _name_ profile
+   get     get _name_ setting to current profile
+   set     set _name_ setting to current profile
+   use     use the _name_ profile
+   clean   initialize all data
 
 options:
    -h    show this help
