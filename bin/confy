@@ -27,7 +27,7 @@ switch (cmd) {
     break;
   case 'use':
     confy.use(name);
-    console.log('use profile:', name);
+    console.log('use profile:', name || 'default');
     break;
   case 'clean':
     prompt.start();
