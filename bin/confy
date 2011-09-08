@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 var confy = require('../lib/confy');
+var prompt = require('prompt');
+var usage = require('data-section').getSync('usage');
 var argv = process.argv;
 var cmd = argv[2];
 var name = argv[3];
-var usage = require('data-section').getSync('usage');
 
 switch (cmd) {
   case 'get':
@@ -19,6 +20,18 @@ switch (cmd) {
   case 'use':
     confy.use(name);
     console.log('use profile:', name);
+    break;
+  case 'clean':
+    prompt.start();
+    prompt.get([{
+      name: 'yn',
+      message: 'Clean all data? [y/n]'
+    }], function(err, result) {
+      if (result.yn === 'y') {
+        confy.clean();
+        console.log('clean data');
+      }
+    });
     break;
   case '-v':
     console.log('confy version', confy.version);
