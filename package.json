@@ -1,7 +1,7 @@
 {
   "name": "confy",
   "description": "Manage settings library, like as pit.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Kazuhito Hokamura <k.hokamura@gmail.com>",
   "repository": {
     "type": "git",
