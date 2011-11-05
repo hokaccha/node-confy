@@ -3,7 +3,7 @@ var testCase = require('nodeunit').testCase;
 
 confy.configFile = __dirname + '/.confy';
 confy.clean();
-process.ENV.EDITOR = __dirname + '/editorcmd';
+process.env.EDITOR = __dirname + '/editorcmd';
 
 module.exports = testCase({
   setUp: function (callback) {
