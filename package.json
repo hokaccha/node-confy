@@ -12,6 +12,9 @@
     "temp": "0.2.0",
     "prompt": "0.1.7"
   },
+  "scripts": {
+    "test": "nodeunit test"
+  },
   "bin": { "confy": "./bin/confy" },
   "keywords": ["config", "cli", "pit"],
   "main": "./index"
