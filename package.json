@@ -12,6 +12,9 @@
     "temp": "0.2.0",
     "prompt": "0.1.7"
   },
+  "devDependencies": {
+    "nodeunit": ">= 0.6.2"
+  },
   "scripts": {
     "test": "nodeunit test"
   },
