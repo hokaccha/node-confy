@@ -8,7 +8,7 @@
     "url": "http://github.com/hokaccha/node-confy.git"
   },
   "dependencies": {
-    "data-section": "0.2.0",
+    "data-section": "0.2.1",
     "temp": "0.4.0",
     "prompt": "0.1.7"
   },
