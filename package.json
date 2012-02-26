@@ -17,6 +17,7 @@
   "scripts": {
     "test": "nodeunit test"
   },
+  "engines": { "node": ">= 0.4.0" },
   "bin": { "confy": "./bin/confy" },
   "keywords": ["config", "cli", "pit"],
   "main": "./index"
